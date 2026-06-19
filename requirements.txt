@@ -1,0 +1,22 @@
+# Gwen-TTS — cài dependencies vào venv
+#
+# Windows (PowerShell):
+#   .\venv\Scripts\Activate.ps1
+#   python -m pip install --upgrade pip
+#   pip install -r requirements.txt
+#   pip install setuptools
+#   pip install flash-attn --no-build-isolation
+#
+# Linux / macOS:
+#   source venv/bin/activate
+#   pip install -r requirements.txt
+#
+# PyTorch CUDA 12.4 (theo README). Nếu máy dùng CUDA khác, đổi cu124 → cu121 hoặc cu118.
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+qwen-tts>=0.1.1
+torch>=2.5.0
+torchaudio>=2.5.0
+soundfile>=0.12.0
+numpy>=1.24.0
